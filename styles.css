@@ -1,0 +1,245 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+    color-scheme: light;
+    --page: #F8FAFC;
+    --surface: #FFFFFF;
+    --surface-soft: #F1F5F9;
+    --border: #E2E8F0;
+    --border-strong: #CBD5E1;
+    --text: #1E293B;
+    --text-muted: #64748B;
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+}
+
+html, body {
+    background: var(--page);
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    font-weight: 400;
+}
+
+code, pre, .font-mono,
+#metric-avg-wt, #metric-avg-tat,
+#current-clock-time, #quantum-counter,
+#race-counter-val, #sem-binary-state {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border: 2px solid #F1F5F9;
+    border-radius: 8px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #94A3B8;
+    }
+
+/* Convertir las superficies oscuras actuales en superficies claras */
+.bg-slate-950 {
+    background-color: #F8FAFC !important;
+}
+
+.bg-slate-900 {
+    background-color: #FFFFFF !important;
+}
+
+.bg-slate-800 {
+    background-color: #F1F5F9 !important;
+}
+
+.border-slate-800,
+.border-slate-800\/80,
+.border-slate-800\/60 {
+    border-color: #E2E8F0 !important;
+}
+
+.border-slate-700 {
+    border-color: #CBD5E1 !important;
+}
+
+/* Contraste de textos en fondos claros */
+.text-white {
+    color: #1E293B !important;
+}
+
+.text-slate-100 {
+    color: #1E293B !important;
+}
+
+.text-slate-200 {
+    color: #334155 !important;
+}
+
+.text-slate-300 {
+    color: #475569 !important;
+}
+
+.text-slate-400, .text-slate-500, .text-slate-600 {
+    color: #64748B !important;
+}
+
+/* Acento azul sobrio */
+.text-cyan-400, .text-cyan-500 {
+    color: #2563EB !important;
+}
+
+.text-indigo-400 {
+    color: #4F46E5 !important;
+}
+
+.bg-cyan-600, .bg-indigo-600 {
+    background-color: #2563EB !important;
+}
+
+.hover\:bg-cyan-500:hover,
+.hover\:bg-indigo-500:hover {
+    background-color: #1D4ED8 !important;
+}
+
+/* Mantener texto blanco en botones de color */
+button.bg-cyan-600, button.bg-cyan-600\/80,
+button.bg-indigo-600, button.bg-rose-600,
+button.bg-rose-600\/80, button.bg-emerald-600,
+button.bg-blue-600 {
+    color: #FFFFFF !important;
+}
+
+    button.bg-cyan-600 *, button.bg-indigo-600 *,
+    button.bg-rose-600 *, button.bg-rose-600\/80 *,
+    button.bg-emerald-600 *, button.bg-blue-600 * {
+        color: inherit;
+    }
+
+/* Navegación y encabezado */
+header {
+    background: rgba(255,255,255,.96) !important;
+    border-color: #E2E8F0 !important;
+    box-shadow: 0 1px 2px rgba(15,23,42,.04);
+}
+
+nav {
+    background: #F1F5F9 !important;
+    border-color: #E2E8F0 !important;
+}
+
+.tab-btn:hover {
+    color: #1E293B !important;
+    background: #E2E8F0 !important;
+}
+
+.tab-btn.bg-slate-800 {
+    color: #1D4ED8 !important;
+    background: #DBEAFE !important;
+}
+
+/* Formularios */
+input, select, textarea {
+    color: #1E293B;
+}
+
+    input::placeholder {
+        color: #94A3B8;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #93C5FD !important;
+        box-shadow: 0 0 0 3px rgba(37,99,235,.10);
+        outline: none;
+    }
+
+    button:focus-visible, input:focus-visible, select:focus-visible {
+        outline: 3px solid rgba(37,99,235,.20);
+        outline-offset: 2px;
+    }
+
+/* Componentes y tarjetas */
+.rounded-2xl {
+    border-radius: 12px !important;
+}
+
+.rounded-xl {
+    border-radius: 10px !important;
+}
+
+.shadow-lg, .shadow-2xl {
+    box-shadow: 0 1px 2px rgba(15,23,42,.05), 0 4px 12px rgba(15,23,42,.035) !important;
+}
+
+button {
+    font-family: inherit;
+    transition: all .18s ease;
+}
+
+    button:not(:disabled):active {
+        transform: translateY(1px);
+    }
+
+/* Visualizaciones */
+#cpu-status-box > div {
+    background: #F1F5F9 !important;
+    border-color: #CBD5E1 !important;
+    color: #64748B !important;
+}
+
+#gantt-bars {
+    background: #F1F5F9 !important;
+    border-color: #E2E8F0 !important;
+}
+
+#race-log, #deadlock-cycle-desc {
+    background: #F8FAFC !important;
+    border-color: #E2E8F0 !important;
+}
+
+table thead {
+    background: #FFFFFF !important;
+}
+
+tbody tr:hover {
+    background: #F8FAFC;
+}
+
+th {
+    color: #64748B;
+    font-weight: 600;
+}
+
+/* Quitar brillos decorativos excesivos */
+.glow-cyan, .glow-rose, .glow-emerald {
+    box-shadow: none;
+}
+
+/* Modal de error */
+#oom-modal > div {
+    background: #FFFFFF !important;
+    border-color: #FDA4AF !important;
+}
+
+#oom-modal-msg {
+    background: #FFF1F2 !important;
+    border-color: #FECDD3 !important;
+    color: #475569 !important;
+}
+
+/* Footer */
+footer {
+    background: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+}
